@@ -1,0 +1,209 @@
+[
+   {
+      "codeUE": "INF111",
+      "Element_Constitutif": ["Analyse 1","Algebre 1"], 
+      "VHT": 160,
+      "Coef": 3,
+      "Credit": 8,
+      "ecs": [ 
+          {
+         "codeEC" : "INF1111",
+         "intitule":"Analyse 1",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+         "nbHeureTD" : 20,
+         "nbTotalHeure": 80
+      },
+      {
+         "codeEC" : "INF1112",
+         "intitule":"Algebre 1",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+         "nbHeureTD'" : 20,
+         "nbTotalHeure": 80
+      }
+            ]
+   },
+
+   {
+      "codeUE": "INF112",
+      "Element_Constitutif": ["Fondamentaux de physique","Electricite"], 
+      "VHT": 160,
+      "Coef": 3,
+      "Credit": 8,
+      "ecs": [
+         {
+         "codeEC" : "INF1121",
+         "intitule":"Fondamentaux de physique",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+         "nbHeureTD" : 20,
+         "nbTotalHeure": 80
+      },
+      {
+         "codeEC" : "INF1122",
+         "intitule":"Electricite",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+         "nbHeureTD" : 20,
+         "nbTotalHeure": 80
+      }
+   ]
+   },
+
+   {
+         "codeUE": "INF113",
+         "Element_Constitutif": ["Algorithme et programation 1","Introduction au syteme d'exploitation"], 
+         "VHT": 160,
+         "Coef": 4,
+         "Credit": 8,
+         "ecs": [
+            {
+            "codeEC" : "INF1131",
+            "intitule":"Algorithme et programation 1",
+            "statut": "Pa encore commencer",
+            "nbHeureCM" : 40,
+            "nbHeureTD" : 40,
+            "nbTotalHeure": 80
+         },
+         {
+            "codeEC" : "INF1132",
+            "intitule":"Introduction au syteme d'exploitation",
+            "statut": "Pa encore commencer",
+            "nbHeureCM" : 40,
+            "nbHeureTD" : 40,
+            "nbTotalHeure": 80
+         }
+      ]
+   },
+   { 
+       "codeUE": "INF114",
+      "Element_Constitutif": ["Anglais 1","Recherche documentaire"], 
+      "VHT": 130,
+      "Coef": 2,
+      "Credit": 6,
+      "ecs": [ 
+         {
+               "codeEC" : "INF1141",
+               "intitule":"Anglais 1",
+               "statut": "Pa encore commencer",
+               "nbHeureCM" : 30,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 50
+            },
+            {
+               "codeEC" : "INF1142",
+               "intitule":"Recherche documentaire",
+               "statut": "Pa encore commencer",
+               "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+            }
+       ]
+   }, 
+   
+
+    {
+      "codeUE": "INF121",
+      "Element_Constitutif": ["Analyse 2","Algebre 2"], 
+      "VHT": 160,
+      "Coef": 3,
+      "Credit": 8,
+      "ecs": [ 
+          {
+         "codeEC" : "INF1211",
+         "intitule":"Analyse 2",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+         "nbHeureTD" : 20,
+         "nbTotalHeure": 80
+      },
+      {
+         "codeEC" : "INF1212",
+         "intitule":"Algebre 2",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+         "nbHeureTD" : 20,
+         "nbTotalHeure": 80
+      }
+            ]
+   },
+    {
+      "codeUE": "INF122",
+      "Element_Constitutif": ["ondes et propagation","Electronique"], 
+      "VHT": 160,
+      "Coef": 3,
+      "Credit": 8,
+      "ecs": [
+         {
+         "codeEC" : "INF1221",
+         "intitule":"Ondes et propagation",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+         "nbHeureTD" : 20,
+         "nbTotalHeure": 80
+      },
+      {
+         "codeEC" : "INF1222",
+         "intitule":"Electronique",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+         "nbHeureTD" : 20,
+         "nbTotalHeure": 80
+      }
+   ]
+   },
+
+     {
+         "codeUE": "INF123",
+         "Element_Constitutif": ["Algorithme et programation 2","Architecture des ordinateurs"], 
+         "VHT": 160,
+         "Coef": 3,
+         "Credit": 8,
+         "ecs": [
+            {
+            "codeEC" : "INF1231",
+            "intitule":"Algorithme et programation 2",
+            "statut": "Pa encore commencer",
+            "nbHeureCM" : 60,
+            "nbHeureTD" : 20,
+            "nbTotalHeure": 80
+         },
+         {
+            "codeEC" : "INF1132",
+            "intitule":"Architecture des ordinateurs",
+            "statut": "Pa encore commencer",
+            "nbHeureCM" : 60,
+            "nbHeureTD" : 20,
+            "nbTotalHeure": 80
+         }
+      ]
+   },
+
+     { 
+       "codeUE": "INF124",
+      "Element_Constitutif": ["Anglais 2","Technique de communication"], 
+      "VHT": 130,
+      "Coef": 2,
+      "Credit": 6,
+      "ecs": [ 
+         {
+               "codeEC" : "INF1241",
+               "intitule":"Anglais 1",
+               "statut": "Pa encore commencer",
+               "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+            },
+            {
+               "codeEC" : "INF1242",
+               "intitule":"Technique de communication",
+               "statut": "Pa encore commencer",
+               "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+            }
+       ]
+   }
+            
+]

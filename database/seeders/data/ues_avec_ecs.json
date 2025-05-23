@@ -1,0 +1,559 @@
+[
+   {
+      "codeUE": "INF111",
+      "Element_Constitutif": "Analyse 1, Algebre 1", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [ 
+          {
+         "codeEC" : "INF1111",
+          "codeUE": "INF111",
+         "intitule":"Analyse 1",
+         "statut": "Pa encore commencer",
+        "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+      },
+      {
+         "codeEC" : "INF1112",
+          "codeUE": "INF111",
+         "intitule":"Algebre 1",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+      }
+            ]
+   },
+
+   {
+      "codeUE": "INF112",
+      "Element_Constitutif":  "Fondamentaux de physique, Elctricite", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [
+         {
+         "codeEC" : "INF1121",
+         "codeUE": "INF112",
+         "intitule":"Fondamentaux de physique",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+      },
+      {
+         "codeEC" : "INF1122",
+         "codeUE": "INF112",
+         "intitule":"Elctricite",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+      }
+   ]
+   },
+
+   {
+         "codeUE": "INF113",
+         "Element_Constitutif": "Algorithme et programation 1, Introduction au syteme d'exploitation", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+         "ecs": [
+            {
+            "codeEC" : "INF1131",
+              "codeUE": "INF113",
+            "intitule":"Algorithme et programation 1",
+            "statut": "Pa encore commencer",
+             "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+         },
+         {
+            "codeEC" : "INF1132",
+              "codeUE": "INF113",
+            "intitule":"Introduction au syteme d'exploitation",
+            "statut": "Pa encore commencer",
+            "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+         }
+      ]
+   },
+   { 
+       "codeUE": "INF114",
+      "Element_Constitutif": "Anglais 1, Recherche documentaire", 
+      "VHT": "130",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [ 
+         {
+               "codeEC" : "INF1141",
+                "codeUE": "INF114",
+               "intitule":"Anglais 1",
+               "statut": "Pa encore commencer",
+               "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+            },
+            {
+               "codeEC" : "INF1142",
+                "codeUE": "INF114",
+               "intitule":"Recherche documentaire",
+               "statut": "Pa encore commencer",
+               "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+            }
+       ]
+   }, 
+   
+
+    {
+      "codeUE": "INF121",
+      "Element_Constitutif": "Analyse 2, Algebre 2", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [ 
+          {
+         "codeEC" : "INF1211",
+         "codeUE": "INF121",
+         "intitule":"Analyse 2",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+      },
+      {
+         "codeEC" : "INF1212",
+         "codeUE": "INF121",
+         "intitule":"Algebre 2",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+      }
+            ]
+   },
+    {
+      "codeUE": "INF122",
+      "Element_Constitutif": "ondes et propagation, Electronique", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [
+         {
+         "codeEC" : "INF1221",
+         "codeUE": "INF122",
+         "intitule":"Ondes et propagation",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+      },
+      {
+         "codeEC" : "INF1222",
+         "codeUE": "INF122",
+         "intitule":"Electronique",
+         "statut": "Pa encore commencer",
+         "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+      }
+   ]
+   },
+
+     {
+         "codeUE": "INF123",
+         "Element_Constitutif": "Algorithme et programation 2 ,Architecture des ordinateurs", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+         "ecs": [
+            {
+            "codeEC" : "INF1231",
+              "codeUE": "INF123",
+            "intitule":"Algorithme et programation 2",
+            "statut": "Pa encore commencer",
+        "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+         },
+         {
+            "codeEC" : "INF1232",
+              "codeUE": "INF123",
+            "intitule":"Architecture des ordinateurs",
+            "statut": "Pa encore commencer",
+            "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+         }
+      ]
+   },
+
+     { 
+       "codeUE": "INF124",
+      "Element_Constitutif": "Anglais 2, Technique de communication", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [ 
+         {
+               "codeEC" : "INF1241",
+               "codeUE": "INF124",
+               "intitule":"Anglais 1",
+               "statut": "Pa encore commencer",
+               "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+            },
+            {
+               "codeEC" : "INF1242",
+               "codeUE": "INF124",
+               "intitule":"Technique de communication",
+               "statut": "Pa encore commencer",
+               "nbHeureCM" : 30,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 50
+            }
+       ]
+   },
+
+   
+     { 
+       "codeUE": "INF231",
+      "Element_Constitutif": "Calcule numerique, Probabilite et statistique", 
+      "VHT": "120",
+      "Coef": "2",
+      "Credit": "6",
+      "ecs": [ 
+         {
+               "codeEC" : "INF2311",
+               "codeUE": "INF231",
+               "intitule":"Calcule numerique",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 60
+            },
+            {
+               "codeEC" : "INF2312",
+               "codeUE": "INF231",
+               "intitule":"Probabilite et statistique",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 60
+            }
+       ]
+   },
+    
+    { 
+       "codeUE": "INF232",
+      "Element_Constitutif": "Systeme d'exploitation, Introduction  aux reseaux", 
+      "VHT": "120",
+      "Coef": "2",
+      "Credit": "6",
+      "ecs": [ 
+         {
+               "codeEC" : "INF2321",
+               "codeUE": "INF232",
+               "intitule":"Systeme d'exploitation",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 60
+            },
+            {
+               "codeEC" : "INF2322",
+               "codeUE": "INF232",
+               "intitule":"Introduction  aux reseaux",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 60
+            }
+       ]
+   },
+
+     { 
+       "codeUE": "INF233",
+      "Element_Constitutif": "Algorithme et structure de donnees, Developpement web 1", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [ 
+         {
+               "codeEC" : "INF2331",
+               "codeUE": "INF233",
+               "intitule":"Algorithme et structure de donnees",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+            },
+            {
+               "codeEC" : "INF2332",
+               "codeUE": "INF233",
+               "intitule":"Developpement web 1",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 60,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 80
+
+            }
+       ]
+   },
+   
+        { 
+       "codeUE": "INF234",
+      "Element_Constitutif": "Analyse et conception des systemes d'information,  Introduction au BD relationnelle", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [ 
+         {
+               "codeEC" : "INF2341",
+               "codeUE": "INF234",
+               "intitule":"Analyse et conception des systemes d'information",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 60
+            },
+            {
+               "codeEC" : "INF2342",
+               "codeUE": "INF234",
+               "intitule":"Developpement web 1",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 60
+
+            }
+       ]
+   },
+
+    { 
+       "codeUE": "INF234",
+      "Element_Constitutif": "Analyse et conception des systemes d'information,  Introduction au BD relationnelle", 
+      "VHT": "160",
+      "Coef": "2",
+      "Credit": "6",
+      "ecs": [ 
+         {
+               "codeEC" : "INF2341",
+               "codeUE": "INF234",
+               "intitule":"Analyse et conception des systemes d'information",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 60
+            },
+            {
+               "codeEC" : "INF2342",
+               "codeUE": "INF234",
+               "intitule":"Developpement web 1",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 60
+
+            }
+       ]
+   },
+
+       { 
+       "codeUE": "INF235",
+      "Element_Constitutif": "Projet personnel et professionnel,  Anglais 4", 
+      "VHT": "100",
+      "Coef": "2",
+      "Credit": "4",
+      "ecs": [ 
+         {
+               "codeEC" : "INF2351",
+               "codeUE": "INF235",
+               "intitule":"Projet personnel et professionnel",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 30,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 50
+            },
+            {
+               "codeEC" : "INF2342",
+               "codeUE": "INF234",
+               "intitule":"Anglais 4",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 30,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 50
+
+            }
+       ]
+   },
+   
+    { 
+       "codeUE": "INF241",
+      "Element_Constitutif": "Introduction a la securite,  Reseaux locaux ", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [ 
+         {
+               "codeEC" : "INF2411",
+               "codeUE": "INF241",
+               "intitule":"Introduction a la securite",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 40,
+               "nbTotalHeure": 80
+            },
+            {
+               "codeEC" : "INF2412",
+               "codeUE": "INF241",
+               "intitule":"Reseaux locaux",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 40,
+               "nbTotalHeure": 80
+
+            }
+       ]
+   },
+
+      { 
+       "codeUE": "INF242",
+      "Element_Constitutif": " Programmation orientee objet 1,  Analyse et conception de systemes orientes objets ", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [ 
+         {
+               "codeEC" : "INF2421",
+               "codeUE": "INF242",
+               "intitule":"Programmation orientee objet 1",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 40,
+               "nbTotalHeure": 80
+            },
+            {
+               "codeEC" : "INF2422",
+               "codeUE": "INF242",
+               "intitule":"Analyse et conception de systemes orientes objets",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 40,
+               "nbTotalHeure": 80
+
+            }
+       ]
+   },
+
+   
+      { 
+       "codeUE": "INF243",
+      "Element_Constitutif": " Tecnhologie XML,  Developpement web 2 ", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [ 
+         {
+               "codeEC" : "INF2431",
+               "codeUE": "INF243",
+               "intitule":"Programmation orientee objet 1",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 40,
+               "nbTotalHeure": 80
+            },
+            {
+               "codeEC" : "INF2432",
+               "codeUE": "INF243",
+               "intitule":"Developpement web 2",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 40,
+               "nbTotalHeure": 80
+
+            }
+       ]
+   },
+
+   
+      { 
+       "codeUE": "INF244",
+      "Element_Constitutif": " Gestion des projets,  Leadership et dev peronnel, Anglais 4 ", 
+      "VHT": "120",
+      "Coef": "2",
+      "Credit": "6",
+      "ecs": [ 
+         {
+               "codeEC" : "INF2441",
+               "codeUE": "INF244",
+               "intitule":"Programmation orientee objet 1",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 20,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 40
+            },
+            {
+               "codeEC" : "INF2442",
+               "codeUE": "INF244",
+               "intitule":"Developpement web 2",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 20,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 40
+
+            },
+             {
+               "codeEC" : "INF2443",
+               "codeUE": "INF244",
+               "intitule":"Anglais 4",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 20,
+               "nbHeureTD" : 20,
+               "nbTotalHeure": 40
+
+            }
+       ]
+   },
+
+   
+   
+      { 
+       "codeUE": "INF243",
+      "Element_Constitutif": " Tecnhologie XML,  Developpement web 2 ", 
+      "VHT": "160",
+      "Coef": "3",
+      "Credit": "8",
+      "ecs": [ 
+         {
+               "codeEC" : "INF2431",
+               "codeUE": "INF243",
+               "intitule":"Programmation orientee objet 1",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 40,
+               "nbTotalHeure": 80
+            },
+            {
+               "codeEC" : "INF2432",
+               "codeUE": "INF243",
+               "intitule":"Developpement web 2",
+               "statut": "Pas encore commencer",
+               "nbHeureCM" : 40,
+               "nbHeureTD" : 40,
+               "nbTotalHeure": 80
+
+            }
+       ]
+   }
+
+   
+      
+]
