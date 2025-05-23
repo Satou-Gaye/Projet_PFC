@@ -16,14 +16,14 @@ return new class extends Migration
             $table->unsignedBigInteger('semestre_id');
             $table->unsignedBigInteger('option_id');
             $table->unsignedBigInteger('annee_academique_id');
-            $table->nsignedBigInteger('codeUE');
+            $table->unsignedBigInteger('codeUE');
             $table->string('nom_niveau');            
             $table->timestamps();
 
-            $table->foreign('codeUE')->references('codeUE')->on('ues')->onDelete('cascade');
-            $table->foreign('semestre_id')->references('id')->on('options')->onDelete('cascade');
+            $table->foreignId('ues_id')->onDelete('cascade');
+            $table->foreign('semestre_id')->references('id')->on('semestres')->onDelete('cascade');
             $table->foreign('option_id')->references('id')->on('options')->nullable();
-            $table->foreign('annee_academique_id')->references('id')->on('annee_academiques')->onDelete('cascade');
+            $table->foreignId('annee_academiques_id')->onDelete('cascade');
         });
     }
 
