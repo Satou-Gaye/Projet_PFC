@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 
-class EC extends Model
+class Ecs extends Model
 {
     /** @use HasFactory<\Database\Factories\EcFactory> */
     use HasFactory;
@@ -29,11 +29,11 @@ class EC extends Model
     public $incrementing = false;
 
     public function ue(): BelongsTo {
-        return $this->belongsTo(UE::class);
+        return $this->belongsTo(Ues::class);
     }
 
     public function semestre(){
-    return $this->belongsTo(Semestre::class);
+    return $this->belongsTo(Semestres::class);
     }
 
     public function niveau(){

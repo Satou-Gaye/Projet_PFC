@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Niveau;
+use App\Models\Niveaux;
 use App\Http\Requests\StoreNiveauRequest;
 use App\Http\Requests\UpdateNiveauRequest;
 
-class NiveauController extends Controller
+class NiveauxController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $niveau = Niveau::all();  
+        $niveau = Niveaux::all();  
         return view('niveaux.index', 
         compact('niveau'));
     }
@@ -37,7 +37,7 @@ class NiveauController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Niveau $niveau)
+    public function show(Niveaux $niveau)
     {
          $etat = Ec:: find($niveau);
          return view('niveaux.show',compact('niveau'));
@@ -46,7 +46,7 @@ class NiveauController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Niveau $niveau)
+    public function edit(Niveaux $niveau)
     {
         //
     }
@@ -54,7 +54,7 @@ class NiveauController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateNiveauRequest $request, Niveau $niveau)
+    public function update(UpdateNiveauRequest $request, Niveaux $niveau)
     {
         //
     }
@@ -62,7 +62,7 @@ class NiveauController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Niveau $niveau)
+    public function destroy(Niveaux $niveau)
     {
         //
     }

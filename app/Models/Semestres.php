@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 
 
-class Semestre extends Model
+class Semestres extends Model
 {
     /** @use HasFactory<\Database\Factories\SemestreFactory> */
     use HasFactory;
@@ -20,20 +20,20 @@ class Semestre extends Model
     //public $incrementing = true;
     public function anneeAcademique(): BelongsTo
     {
-        return $this->belongsTo(AnneeAcademique::class);
+        return $this->belongsTo(Annee_academique::class);
     }
 
     public function ues(): BelongsToMany {
-        return $this->belongsToMany(UE::class, 'semestre_ue');
+        return $this->belongsToMany(Ues::class, 'semestre_ue');
     }
 
     public function niveaux(): BelongsToMany {
-        return $this->belongsTo(Niveau::class, 'semestre_niveau');
+        return $this->belongsTo(Niveaux::class, 'semestre_niveau');
     }
 
     public function option()
     {
-        return $this->belongsTo(Option::class);
+        return $this->belongsTo(Options::class);
     }
 
     

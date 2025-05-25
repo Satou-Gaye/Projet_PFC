@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Relations\BelongsTo;
 
-class AcademicPeriode extends Model
+class Periode_academiques extends Model
 {
     /** @use HasFactory<\Database\Factories\AcademicPeriodeFactory> */
     use HasFactory;
@@ -29,12 +29,12 @@ class AcademicPeriode extends Model
 
     public function niveau()
     {
-        return $this->belongsTo(Niveau::class);
+        return $this->belongsTo(Niveaux::class);
     }
 
     public function anneeAcademique()
     {
-        return $this->belongsTo(AnneeAcademique::class);
+        return $this->belongsTo(Annee_academique::class);
     }
 
 }

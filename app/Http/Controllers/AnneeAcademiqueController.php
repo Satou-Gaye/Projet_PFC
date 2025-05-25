@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Annee_academique;
-use App\Http\Requests\StoreAnnee_academiqueRequest;
-use App\Http\Requests\UpdateAnnee_academiqueRequest;
+use App\Models\AnneeAcademique;
+use App\Http\Requests\StoreAnneeAcademiqueRequest;
+use App\Http\Requests\UpdateAnneeAcademiqueRequest;
 
 class AnneeAcademiqueController extends Controller
 {
@@ -27,7 +27,7 @@ class AnneeAcademiqueController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreAnnee_academiqueRequest $request)
+    public function store(StoreAnneeAcademiqueRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class AnneeAcademiqueController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Annee_academique $annee_academique)
+    public function show(AnneeAcademique $annee_academique)
     {
         //
     }
@@ -43,7 +43,7 @@ class AnneeAcademiqueController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Annee_academique $annee_academique)
+    public function edit(AnneeAcademique $annee_academique)
     {
         //
     }
@@ -51,7 +51,7 @@ class AnneeAcademiqueController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateAnnee_academiqueRequest $request, Annee_academique $annee_academique)
+    public function update(UpdateAnneeAcademiqueRequest $request, AnneeAcademique $annee_academique)
     {
         //
     }
@@ -59,7 +59,7 @@ class AnneeAcademiqueController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Annee_academique $annee_academique)
+    public function destroy(AnneeAcademique $annee_academique)
     {
         //
     }

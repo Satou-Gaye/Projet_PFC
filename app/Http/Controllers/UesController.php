@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ue;
+use App\Models\Ues;
 use App\Http\Requests\StoreUeRequest;
 use App\Http\Requests\UpdateUeRequest;
 
-class UEController extends Controller
+class UesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $ue = UE::all();  
+        $ue = Ues::all();  
         return view('uesindex', 
         compact('ue'));
     }
@@ -37,16 +37,16 @@ class UEController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(UE $ue)
+    public function show(Ues $ue)
     {
-         $module = UE:: find($ue);
+         $module = Ues:: find($ue);
          return view('ues.show',compact('ue'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(UE $ue)
+    public function edit(Ues $ue)
     {
         //
     }
@@ -54,7 +54,7 @@ class UEController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateUeRequest $request, UE $ue)
+    public function update(UpdateUeRequest $request, Ues $ue)
     {
         //
     }
@@ -62,7 +62,7 @@ class UEController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(UE $ue)
+    public function destroy(Ues $ue)
     {
         //
     }

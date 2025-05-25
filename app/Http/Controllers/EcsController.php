@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ec;
-use App\Http\Requests\StoreEcRequest;
-use App\Http\Requests\UpdateEcRequest;
+use App\Models\Ecs;
+use App\Http\Requests\StoreEcsRequest;
+use App\Http\Requests\UpdateEcsRequest;
 
-class ECController extends Controller
+class EcsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $ecs = EC::all();  
+        $ecs = Ecs::all();  
         return view('ecs.index', 
         compact('ec'));  // -> resources/views/Ecs/index.blade.php   
     }
@@ -29,7 +29,7 @@ class ECController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreEcRequest $request)
+    public function store(StoreEcsRequest $request)
     {
         //
     }
@@ -37,16 +37,16 @@ class ECController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(EC $ec)
+    public function show(Ecs $ec)
     {
-         $cours = EC:: find($ec);
+         $cours = Ecs:: find($ec);
          return view('ecs.show',compact('ec'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Ec $ec)
+    public function edit(Ecs $ec)
     {
         //
     }
@@ -54,7 +54,7 @@ class ECController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateEcRequest $request, EC $ec)
+    public function update(UpdateEcsRequest $request, Ecs $ec)
     {
         
     }
@@ -62,12 +62,12 @@ class ECController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(EC $ec)
+    public function destroy(Ecs $ec)
     {
         //
     }
 
-    public function SuiviEc(EC $ec , $heure):array
+    public function SuiviEc(Ecs $ec , $heure):array
     {
 
         $ec->nbHeureSuivi += $heure;
@@ -87,7 +87,7 @@ class ECController extends Controller
             'Heure Suivie' => $ec->nbHeureSuivi,
             'Heure Retante'=> $heureRestante,
             'Progression' => round($pourcentage,2),
-            'Statut' => ($ec->nbHeureSuivie >= $ec->nbHeureTotale)
+            'Statut' => ($ec->nbHeureSuivi >= $ec->nbHeureTotale)
             ? 'Terminé '
             : 'En cours '
         ];
@@ -96,7 +96,7 @@ class ECController extends Controller
 
     public function suiviComplet(){
         
-    $ecs = Ec::with('semestre.niveau')->get();
+    $ecs = Ecs::with('semestre.niveau')->get();
     return view('suivi.complet', compact('ecs'));
     
 

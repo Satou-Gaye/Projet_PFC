@@ -6,7 +6,7 @@ use App\Models\Assistante_departements;
 use App\Http\Requests\StoreAssistante_departementsRequest;
 use App\Http\Requests\UpdateAssistante_departementsRequest;
 
-class AssistanteDepartementsController extends Controller
+	class AssistanteDepartementsController extends Controller
 {
     /**
      * Display a listing of the resource.

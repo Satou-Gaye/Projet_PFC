@@ -3,18 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\AcademicPeriode;
-use App\Services\AcademicPeriodeService;
-use App\Http\Requests\StoreAcademicPeriodeRequest;
-use App\Http\Requests\UpdateAcademicPeriodeRequest;
+use App\Models\PeriodeAcademique;
+use App\Services\PeriodeAcademiqueService;
+use App\Http\Requests\StorePeriodeAcademiqueRequest;
+use App\Http\Requests\UpdatePeriodeAcademiqueRequest;
 
-class AcademicPeriodeController extends Controller
+class PeriodeAcademiqueController extends Controller
 {
     protected $academicPeriodeService;
 
-    public function __construct(AcademicPeriodeService $academicPeriodeService)
+    public function __construct(PeriodeAcademiqueService $PeriodeAcademiqueService)
     {
-        $this->academicPeriodeService = $academicPeriodeService;
+        $this->PeriodeAcademiqueService = $PeriodeAcademiqueeService;
     }
 
     /**
@@ -36,7 +36,7 @@ class AcademicPeriodeController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreAcademicPeriodeRequest $request)
+    public function store(StorePeriodeAcademiqueRequest $request)
     {
           $data = $request->validate([
             
@@ -48,16 +48,16 @@ class AcademicPeriodeController extends Controller
             'annee_academique_id'  => 'required|exists:academic_years,id',
         ]);
          // La création déclenche l'observer qui applique les ajustements métier.
-        $academicPeriode = $this->academicPeriodeService->creatingAcademicPeriode($data);
+        $PeriodeAcademique = $this->PeriodeAcademiqueService->creatingAcademicPeriode($data);
 
                 return redirect()->route('academic-periodes.index')
-                         ->with('success', 'Période créée avec succès. Date de fin calculée : ' . $academicPeriode->date_fin);
+                         ->with('success', 'Période créée avec succès. Date de fin calculée : ' . $PeriodeAcademique->date_fin);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(AcademicPeriode $academicPeriode)
+    public function show(PeriodeAcademique $PeriodeAcademique)
     {
         //
     }
@@ -65,7 +65,7 @@ class AcademicPeriodeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(AcademicPeriode $academicPeriode)
+    public function edit(PeriodeAcademique $PeriodeAcademique)
     {
         //
     }
@@ -73,7 +73,7 @@ class AcademicPeriodeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateAcademicPeriodeRequest $request, AcademicPeriode $academicPeriode)
+    public function update(UpdatePeriodeAcademiqueRequest $request, PeriodeAcademique $PeriodeAcademique)
     {
         //
     }
@@ -81,7 +81,7 @@ class AcademicPeriodeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AcademicPeriode $academicPeriode)
+    public function destroy(PeriodeAcademique $PeriodeAcademique)
     {
         //
     }

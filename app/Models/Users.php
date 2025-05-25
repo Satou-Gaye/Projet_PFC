@@ -12,7 +12,7 @@ use Illuminate\Database\Relations\HasOne;
 use Illuminate\Database\Relations\HasMany;
 use Illuminate\Database\Relations\BelongsTo;
 
-class User extends Authenticatable
+class Users extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasApiTokens, HasFactory, Notifiable;

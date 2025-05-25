@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Option extends Model
+class Options extends Model
 {
     /** @use HasFactory<\Database\Factories\OptionFactory> */
     use HasFactory;
@@ -13,12 +13,12 @@ class Option extends Model
 
     public function niveau()
     {
-        return $this->belongsTo(Niveau::class);
+        return $this->belongsTo(Niveaux::class);
     }
 
     // Une option a plusieurs semestres
     public function semestres()
     {
-        return $this->hasMany(Semestre::class);
+        return $this->hasMany(Semestres::class);
     }
 }

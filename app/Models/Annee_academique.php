@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquant\HasMany;
 
-class AnneeAcademique extends Model
+class Annee_academique extends Model
 {
     /** @use HasFactory<\Database\Factories\AnneeAcademiqueFactory> */
     use HasFactory;

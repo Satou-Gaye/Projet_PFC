@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Assistant extends User
+class Assistante_departements extends User
 {
     /** @use HasFactory<\Database\Factories\AssistantFactory> */
     use HasFactory;

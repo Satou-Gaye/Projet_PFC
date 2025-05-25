@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Model;
 
-class ChefDeFilliere extends User
+class Chef_de_fillieres extends User
 {
     /** @use HasFactory<\Database\Factories\ChefDeFilliereFactory> */
     use HasFactory;

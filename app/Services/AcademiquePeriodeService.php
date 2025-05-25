@@ -8,7 +8,7 @@ use App\Services\HolidayICSService;
 use Illuminate\Support\Facades\Cache;
 
 
-class AcademicPeriodeService {
+class AcademiquePeriodeService {
         protected $googleCalendarService;
 
     // Changez la signature pour recevoir une instance de HolidayICSService
