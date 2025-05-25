@@ -5,7 +5,18 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
-{
+{ 
+
+    const ROLE_ADMIN = 'admin';
+    const ROLE_CHEF_DEPARTEMENT = 'chef_departement';
+    const ROLE_CHEF_FILLERE = 'chef_filliere';
+    const ROLE_ASSISTANTE = 'assistante';
+
+    protected $fillable = [
+        'email', 'password', 'role',
+    ];
+
+
     /**
      * Run the migrations.
      */
@@ -23,6 +34,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->unsignedBigInteger('departement_id')->nullable();
+            $table->string('role')->default('assistante'); // ou null si préférable
             $table->rememberToken();
             $table->timestamps();
 
