@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('semestres', function (Blueprint $table) {
             $table->id();
-            $table->string('codeUE');
+            $table->string('codeUE')->default(1);
             //$table->unsignedBigInteger('niveau_id');
-            $table->unsignedBigInteger('annee_academique_id');
+            //$table->unsignedBigInteger('annee_academique_id');
             $table->string('nom_semestre');
             $table->integer('nbSemaines')->default(0);
             $table->timestamps();

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
+            $table->string('nom')->nullable();
             $table->string('prenom');
             $table->string('email')->unique()->check("email LIKE '%@univ-thies.sn'");
             $table->string('statut')->check("'statut' IN ('actif','inactif')");

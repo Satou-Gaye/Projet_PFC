@@ -9,12 +9,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 
 
-class Semestre extends Model
+class Semestres extends Model
 {
     /** @use HasFactory<\Database\Factories\SemestreFactory> */
     use HasFactory;
 
-    protected $fillable = ['id', 'nom_semestre', 'annee_academique_id', 'option_id', 'niveau_id'];
+    protected $fillable = ['id', 'nom_semestre', 'annee_academique_id', 'option_id', 'niveau_id', 'nbSemaines'];
     //protected $primaryKey = 'id_semestre';
     //protected $keyType = 'integer';
     //public $incrementing = true;

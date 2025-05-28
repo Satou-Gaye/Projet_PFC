@@ -16,7 +16,7 @@ return new class extends Migration
             
             $table->string('intitule'); 
            // $table->integer('semestre_id');
-            $table->unsignedBigInteger('codeUEs');
+            $table->string('codeUE');
             $table->string('statut');
             $table->integer('nbHeureCM');
             $table->integer('nbHeureTD');

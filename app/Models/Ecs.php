@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 
-class EC extends Model
+class Ecs extends Model
 {
     /** @use HasFactory<\Database\Factories\EcFactory> */
     use HasFactory;

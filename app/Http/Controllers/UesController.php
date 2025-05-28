@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ue;
+use App\Models\Ues;
 use App\Http\Requests\StoreUeRequest;
 use App\Http\Requests\UpdateUeRequest;
 
-class UEController extends Controller
+class UesController extends Controller
 {
     /**
      * Display a listing of the resource.

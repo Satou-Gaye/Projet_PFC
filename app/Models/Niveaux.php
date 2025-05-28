@@ -9,4 +9,8 @@ class Niveaux extends Model
 {
     /** @use HasFactory<\Database\Factories\NiveauxFactory> */
     use HasFactory;
+
+    protected $table = 'niveaux';
+
+    protected $fillable = ['nom_niveau', 'codeUE', 'id_semestre'  ];
 }

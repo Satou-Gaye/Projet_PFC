@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Chef_de_fillieres;
+use App\Models\ChefDeFillieres;
 use App\Http\Requests\StoreChef_de_fillieresRequest;
 use App\Http\Requests\UpdateChef_de_fillieresRequest;
 

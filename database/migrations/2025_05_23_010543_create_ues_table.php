@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('ues', function (Blueprint $table) {
            // $table->string('codeUE')->primary()->check("'codeUE' LIKE ");
            $table->string('codeUE')->primary();
-           $table->unsignedBigInteger('niveau_id');
-           $table->unsignedBigInteger('semestre_id');
+           //$table->unsignedBigInteger('niveau_id');
+           //$table->unsignedBigInteger('semestre_id');
           // $table->unsignedBigInteger('codeEC');
             $table->string('Element_Constitutif');
             $table->integer('VHT');
@@ -23,8 +23,8 @@ return new class extends Migration
             $table->integer('Credit'); 
             $table->timestamps();
 
-            $table->foreign('niveau_id')->references('id')->on('niveaux')->onDelete('cascade');
-            $table->foreign('semestre_id')->references('id')->on('semestres')->onDelete('cascade');
+            //$table->foreign('niveau_id')->references('id')->on('niveaux')->onDelete('cascade');
+           // $table->foreign('semestre_id')->references('id')->on('semestres')->onDelete('cascade');
         });
         DB::statement("ALTER TABLE ues ADD CONSTRAINT check_codeUE CHECK (codeUE LIKE 'INF%')");
     }

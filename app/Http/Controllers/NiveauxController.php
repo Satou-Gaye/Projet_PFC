@@ -6,7 +6,7 @@ use App\Models\Niveau;
 use App\Http\Requests\StoreNiveauRequest;
 use App\Http\Requests\UpdateNiveauRequest;
 
-class NiveauController extends Controller
+class NiveauxController extends Controller
 {
     /**
      * Display a listing of the resource.

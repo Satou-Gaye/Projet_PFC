@@ -6,7 +6,7 @@ use App\Models\Ec;
 use App\Http\Requests\StoreEcRequest;
 use App\Http\Requests\UpdateEcRequest;
 
-class ECController extends Controller
+class EcsController extends Controller
 {
     /**
      * Display a listing of the resource.

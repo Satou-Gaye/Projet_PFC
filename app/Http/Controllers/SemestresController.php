@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Semestre;
+use App\Models\Semestres;
 use App\Http\Requests\StoreSemestreRequest;
 use App\Http\Requests\UpdateSemestreRequest;
 
-class SemestreController extends Controller
+class SemestresController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $semestre = Semestre::all();  
+        $semestre = Semestres::all();  
         return view('semestres.index', 
-        compact('semestre'));
+        compact('semestres'));
     }
 
     /**
@@ -40,13 +40,13 @@ class SemestreController extends Controller
     public function show(Semestre $semestre)
     {
          $partie = Ec:: find($semestre);
-         return view('Semestres.show',compact('semestre'));
+         return view('Semestres.show',compact('semestres'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Semestre $semestre)
+    public function edit(Semestres $semestre)
     {
         //
     }
@@ -62,7 +62,7 @@ class SemestreController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Semestre $semestre)
+    public function destroy(Semestres $semestre)
     {
         //
     }
