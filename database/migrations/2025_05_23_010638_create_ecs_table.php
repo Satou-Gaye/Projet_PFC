@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('nbHeureTD');
             $table->integer('nbTotalHeure');
             $table->integer('nbHeureSuivi')->default(0);
+            $table->date('date_debut')->nullable();
            // $table->check("codeEC LIKE 'INF%'");
             $table->timestamps();
 

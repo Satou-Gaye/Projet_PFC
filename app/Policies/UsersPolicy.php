@@ -63,4 +63,10 @@ class UsersPolicy
     {
         return false;
     }
+
+    public function manage(User $current, User $target)
+{
+    return $current->canManageUser($target);
+}
+
 }

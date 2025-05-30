@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Semestre;
+use App\Models\Niveau;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreSemestreRequest;
 use App\Http\Requests\UpdateSemestreRequest;
 
@@ -39,7 +41,7 @@ class SemestreController extends Controller
      */
     public function show(Semestre $semestre)
     {
-         $partie = Ec:: find($semestre);
+         $partie = Semestre:: find($semestre);
          return view('Semestres.show',compact('semestre'));
     }
 
@@ -79,6 +81,32 @@ class SemestreController extends Controller
 
         return $pourcentage;
     }
+
+
+   
+
+    
+
+    public function analyse()
+    {
+        $semestres = Semestre::with('niveau')->get();
+
+        // Préparer les données pour Highcharts
+        $semestresChart = $semestres->map(function ($s) {
+            return [
+                'name' => $s->nom ?? 'Semestre ' . $s->id,
+                'y' => $s->nbSemaine,
+                'color' => $s->nbSemaine <= 8 ? '#FFC0CB' : '#7CB5EC' // rose ou bleu
+            ];
+        });
+
+        return view('semestre.analyse', [
+            'semestres' => $semestres,
+            'semestresChart' => $semestresChart
+        ]);
+    }
+
+
 
 }
  

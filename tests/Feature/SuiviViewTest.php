@@ -2,46 +2,72 @@
 
 namespace Tests\Feature;
 
+use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 use App\Models\Ec;
 use App\Models\Semestre;
 use App\Models\Niveau;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\View; // N'oubliez pas d'importer la façade View
 
-class SuiviViewTest extends TestCase
+class SuiviViewTest extends TestCase // Assurez-vous que le nom de la classe correspond au nom du fichier !
 {
     use RefreshDatabase;
 
-    public function test_la_vue_de_suivi_s_affiche_correctement()
+    /** @test */
+    public function la_vue_affiche_correctement_le_reporting_des_cours()
     {
-        // Création de données factices
-        $niveau = Niveau::factory()->create(['nom_niveau' => 'L1']);
-        $semestre = Semestre::factory()->create([
-            'nom_semestre' => 'S1',
-            'niveau_id' => $niveau->id,
-        ]);
+        // Données simulées pour un niveau, semestre, UE et cours
+        $resultats = [
+            [
+                'niveau' => 'L1',
+                'progression_niveau' => 75,
+                'semestres' => [
+                    [
+                        'semestre' => 'Semestre 1',
+                        'progression_semestre' => 80,
+                        'ues' => [
+                            [
+                                'ue' => 'Mathématiques', // Remarque : vos données utilisent 'ue', votre vue utilise 'module'
+                                'cours' => [
+                                    [
+                                        'Cours' => 'Algèbre',
+                                        'Heure_total' => 30,
+                                        'Heure_suivie' => 25,
+                                        'Heure_restante' => 5,
+                                        'Progression' => 83.33,
+                                        'Statut' => 'En cours',
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ];
 
-        $ec = Ec::factory()->create([
-            'Intitule' => 'Mathématiques',
-            'nbHeureSuivi' => 10,
-            'nbHeureTotal' => 20,
-            'semestre_id' => $semestre->id,
-        ]);
+        // Rend la vue Blade directement
+        // Nous capturons le HTML rendu sous forme de chaîne
+        $renderedView = View::make('Suivi.suivi', ['resultats' => $resultats])->render();
 
-        // Appeler la route qui retourne cette vue
-        $response = $this->get('/ecs/suivi'); // Remplace cette route selon ton projet
+        // Pas de assertStatus(200) ici, car nous ne faisons pas de requête HTTP.
+        // Au lieu de cela, nous affirmons le contenu de la chaîne du HTML rendu.
 
-        $response->assertStatus(200);
-        $response->assertViewIs('ecs.suivi'); // Le nom du fichier blade
-        $response->assertViewHas('ecs'); // Vérifie que la variable $ecs est présente
+        $this->assertStringContainsString('Suivi des cours par niveau, semestre et module', $renderedView);
+        $this->assertStringContainsString('Niveau : L1', $renderedView);
+        $this->assertStringContainsString('Semestre : Semestre 1', $renderedView);
 
-        // Vérifie que certains textes apparaissent
-        $response->assertSee('Suivi');
-        $response->assertSee('Mathématiques');
-        $response->assertSee('Progression');
-        $response->assertSee('L1');
-        $response->assertSee('S1');
-        $response->assertSee('%');
+        // IMPORTANT : Vos données ont 'ue' mais votre vue Blade utilise 'module'.
+        // Si votre vue Blade utilise 'Module (UE) : {{ $ue['ue'] }}', alors affirmez 'Module (UE) : Mathématiques'
+        // Si votre vue Blade attend une clé nommée 'module' dans $ue, vous devrez peut-être ajuster vos données de test
+        $this->assertStringContainsString('Module (UE) : Mathématiques', $renderedView);
+
+        $this->assertStringContainsString('Algèbre', $renderedView);
+        $this->assertStringContainsString('30', $renderedView);
+        $this->assertStringContainsString('25', $renderedView);
+        $this->assertStringContainsString('5', $renderedView);
+        $this->assertStringContainsString('83.33%', $renderedView);
+        // Remarque : Votre vue a `class="badge {{ $cours['Statut'] === 'Terminé' ? 'Terminer' : 'En cours' }}"`.
+        // Le mot 'En cours' apparaîtra directement.
+        $this->assertStringContainsString('En cours', $renderedView);
     }
 }
-

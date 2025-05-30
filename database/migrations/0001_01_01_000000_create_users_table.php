@@ -33,8 +33,7 @@ return new class extends Migration
             $table->dateTime('validite_fin')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->unsignedBigInteger('departement_id')->nullable();
-            $table->string('role')->default('assistante'); // ou null si préférable
+            $table->unsignedBigInteger('departement_id')->nullable(); 
             $table->rememberToken();
             $table->timestamps();
 

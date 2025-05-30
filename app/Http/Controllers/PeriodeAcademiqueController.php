@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\PeriodeAcademique;
+use App\Models\Periode_academique;
 use App\Services\PeriodeAcademiqueService;
 use App\Http\Requests\StorePeriodeAcademiqueRequest;
 use App\Http\Requests\UpdatePeriodeAcademiqueRequest;

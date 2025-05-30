@@ -12,6 +12,8 @@ return [
     | other UI elements where an application name needs to be displayed.
     |
     */
+    'calendar_id' => env('GOOGLE_CALENDAR_ID'),
+    'credentials_json' => storage_path('app/google-calendar/credentials.json'),
 
     'name' => env('APP_NAME', 'Laravel'),
 

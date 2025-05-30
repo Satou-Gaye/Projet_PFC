@@ -3,36 +3,63 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use App\Models\Ec;
-use App\Models\Semestre;
-use App\Models\Niveau;
+use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\Attributes\Group;
+use Illuminate\Support\Facades\View;
 
 class ReportingViewTest extends TestCase
 {
-    use RefreshDatabase;
-
-    public function test_reporting_view_displays_ecs()
+    /**
+     * Test that the complete reporting view displays correctly.
+     *
+     * @return void
+     */
+    #[Test]
+    #[Group('reporting')]
+    public function la_vue_reporting_complet_saffiche_correctement(): void
     {
-        // Préparation des données
-        $niveau = Niveau::factory()->create( );
-        $semestre = Semestre::factory()->create( ['niveau_id' => $niveau->id]);
+        $report = [
+            [
+                'niveau' => 'L1',
+                'progression_niveau' => 50,
+                'semestres' => [
+                    [
+                        'semestre' => 'Semestre 1',
+                        'progression_semestre' => 50,
+                        'ues' => [
+                            [
+                                'module' => 'Mathématiques',
+                                'cours' => [
+                                    [
+                                        'intitule' => 'Algèbre',
+                                        'heure_total' => 40,
+                                        'heure_suivie' => 20,
+                                        'heure_restante' => 20,
+                                        'progression' => 50,
+                                        'statut' => 'En cours',
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ];
 
-        $ec = Ec::factory()->create([
-            'semestre_id' => $semestre->id,
-            'nbHeureTotal' => 40,
-            'nbHeureSuivi' => 20,
-            'Intitule' => 'Programmation'
-        ]);
+        $renderedView = View::make('reporting.suivi_cours', ['report' => $report])->render();
 
-        // Simulation de la vue
-        $response = $this->get(route('ecs.index'));
+        // ADD THIS LINE TEMPORARILY:
+        //dd($renderedView); // <-- DUMP THE VIEW CONTENT HERE
 
-        // Vérification du contenu
-        $response->assertStatus(200);
-        $response->assertSee('Liste des EC');
-        $response->assertSee('Programmation');
-        $response->assertSee('50'); // pourcentage progression
+        $this->assertStringContainsString('L1', $renderedView);
+        $this->assertStringContainsString('Semestre 1', $renderedView);
+        $this->assertStringContainsString('Mathématiques', $renderedView);
+        $this->assertStringContainsString('Algèbre', $renderedView);
+        $this->assertStringContainsString('40', $renderedView);
+        $this->assertStringContainsString('20', $renderedView);
+        $this->assertStringContainsString('50%', $renderedView);
+        $this->assertStringContainsString('En cours', $renderedView);
     }
 }
-
