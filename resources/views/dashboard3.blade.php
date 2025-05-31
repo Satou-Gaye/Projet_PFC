@@ -46,7 +46,7 @@
     </main>
 
      
-    @include('partials.footer')
+    @include('profile.partials.footer')
 
 </body>
 </html>

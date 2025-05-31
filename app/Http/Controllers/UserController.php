@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\StoreUsersRequest;
 use App\Http\Requests\UpdateUsersRequest;
 
@@ -42,6 +43,8 @@ compact('users'));
     {
        // $users = User::find($users->id);
         //return view('user.show',compact('user'));
+        return view('user.show', ['user' => $user]);
+
     }
 
     /**
@@ -76,25 +79,13 @@ compact('users'));
 
     
 
-    public function assignRole(Request $request, $id)
-    {
-        $request->validate([
-            'role' => 'required|string|in:admin,chef_departement,chef_filliere,assistant',
-        ]);
-
-        $user = User::findOrFail($id);
-        $user->role = $request->role;
-        $user->save();
-
-        return redirect()->back()->with('success', 'Rôle mis à jour avec succès.');
-    }
-
     public function createUser(Request $request)
 {
     $validator = Validator::make($request->all(), [
         'name' => 'required|string|max:255',
         'email' => 'required|string|email|max:255|unique:users',
         'password' => 'required|string|min:8|confirmed',
+        'role' => 'required|string|in:admin,chef_departement,chef_filliere,assistant',
     ]);
 
     if ($validator->fails()) {
@@ -105,10 +96,12 @@ compact('users'));
         'name' => $request->input('name'),
         'email' => $request->input('email'),
         'password' => Hash::make($request->input('password')),
+        'role' => $request->input('role'), // Affectation du rôle ici
     ]);
 
-    return redirect()->back()->with('success', 'Utilisateur créé avec succès.');
+    return redirect()->back()->with('success', 'Utilisateur créé et rôle assigné avec succès.');
 }
+
 
 
 }

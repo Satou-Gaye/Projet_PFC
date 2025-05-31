@@ -10,6 +10,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Relations\HasOne;
 use Illuminate\Database\Relations\HasMany;
 use Illuminate\Database\Relations\BelongsTo;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -25,7 +26,6 @@ class User extends Authenticatable
         'nom',
         'prenom',
         'email',
-        'matricule',
         'statut',
         'role',
         'password',

@@ -8,10 +8,7 @@
     <header>@include('layouts.navigation')</header>
     <a href="{{ route('login') }}">Se connecter</a>
     <main>
-
-
-        
     </main>
-    <div>@include('partails.footer')</div>
+    <div>@include('profile.partials.footer')</div>
 </body>
 </html>

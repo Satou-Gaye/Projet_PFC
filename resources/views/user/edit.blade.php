@@ -21,7 +21,7 @@ margin-top: 40px;
 </ul>  
 </div><br />  
 @endif  
-<form method="post" action="{{ route('clients.update', $client->id ) 
+<form method="post" action="{{ route('user.update', $client->id ) 
 }}">  
 <div class="form-group">  
 @csrf  
